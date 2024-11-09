@@ -5,7 +5,7 @@ import "./App.css";
 import WelcomeMessage from "./components/WelcomeMessage";
 import Header from "./Header";
 import Footer from "./Footer";
-import MainContent from "./MainContent";
+import MainContent from "./components/MainContent";
 import UserProfile from "./components/UserProfile";
 
 function App() {

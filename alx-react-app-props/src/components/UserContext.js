@@ -1,3 +1,3 @@
 import React from "react";
-
-export let UserContext = React.createContext();
+let UserContext = React.createContext();
+export default UserContext;

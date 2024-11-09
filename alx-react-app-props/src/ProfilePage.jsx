@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import UserInfo from './UserInfo';
 
 function ProfilePage() {

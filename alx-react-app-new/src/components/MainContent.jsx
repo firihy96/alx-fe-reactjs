@@ -1,6 +1,6 @@
 function MainContent() {
   return (
-    <main>
+    <main style={{ width: "80%" ,marginInline: 'auto', backgroundColor: '#ccc'}}>
       <p>I love to visit New York, Paris, and Tokyo.</p>
     </main>
   );

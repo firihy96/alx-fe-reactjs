@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { login, logout } from "./auth";
+import { login, logout } from "./useAuth";
 
 const Home = () => (
   <div>

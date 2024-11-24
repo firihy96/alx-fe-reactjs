@@ -5,7 +5,7 @@ import Profile from './components/Profile';
 import NotFound from './components/NotFound';
 import BlogPost from './components/BlogPost';
 import ProtectedRoute from './components/ProtectedRoute';
-import { login, logout } from './components/auth';
+import { login, logout } from './components/useAuth';
 
 function App() {
   return (

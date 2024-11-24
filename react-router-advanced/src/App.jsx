@@ -30,7 +30,7 @@ function App() {
           />
 
           {/* Dynamic Route for Blog Post */}
-          <Route path="/blog/:postId" element={<BlogPost />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
 
           {/* Catch-all route for 404 */}
           <Route path="*" element={<NotFound />} />

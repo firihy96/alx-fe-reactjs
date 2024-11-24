@@ -20,21 +20,36 @@ const FormikForm = () => {
       validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
-      {() => (
+      {({ values, handleChange }) => (
         <Form>
           <div>
             <label>Username:</label>
-            <Field name="username" type="text" />
+            <Field
+              name="username"
+              type="text"
+              value={values.username} // Explicitly bind value
+              onChange={handleChange} // Explicitly handle changes
+            />
             <ErrorMessage name="username" component="span" />
           </div>
           <div>
             <label>Email:</label>
-            <Field name="email" type="email" />
+            <Field
+              name="email"
+              type="email"
+              value={values.email} // Explicitly bind value
+              onChange={handleChange} // Explicitly handle changes
+            />
             <ErrorMessage name="email" component="span" />
           </div>
           <div>
             <label>Password:</label>
-            <Field name="password" type="password" />
+            <Field
+              name="password"
+              type="password"
+              value={values.password} // Explicitly bind value
+              onChange={handleChange} // Explicitly handle changes
+            />
             <ErrorMessage name="password" component="span" />
           </div>
           <button type="submit">Register</button>

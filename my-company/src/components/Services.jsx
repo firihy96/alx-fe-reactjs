@@ -1,9 +1,7 @@
-import Navbar from "./Navbar";
 
 function Services() {
 	return (
 		<>
-		<Navbar />
 		<div style={{ padding: '20px' }}>
 			<h1>Our Services</h1>
 			<ul>

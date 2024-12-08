@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import data from '../data.json';
 
 const RecipeDetail = () => {
-  const { id } = useParams(); // Get the ID from the route
+  const { id } = useParams(); // Get the ID from the route shadow
   const [recipe, setRecipe] = useState(null);
 
   useEffect(() => {

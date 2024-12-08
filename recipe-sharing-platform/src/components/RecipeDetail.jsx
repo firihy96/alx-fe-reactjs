@@ -24,7 +24,7 @@ const RecipeDetail = () => {
         className="w-full h-64 object-cover rounded-lg mb-4"
       />
       <p className="text-gray-700 mb-4">{recipe.summary}</p>
-      <h2 className="text-2xl font-semibold mt-6 mb-2">Ingredients</h2>
+      <h2 className="text-2xl font-semibold mt-6 mb-2">ingredients</h2>
       <ul className="list-disc list-inside text-gray-700">
         <li>Ingredient 1</li>
         <li>Ingredient 2</li>

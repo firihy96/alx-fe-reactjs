@@ -31,8 +31,8 @@ const AddRecipeForm = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">Add a New Recipe</h1>
+    <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+      <h1 className="text-3xl font-bold mb-4 text-center">Add a New Recipe</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="title" className="block text-lg font-semibold">Recipe Title</label>
@@ -41,7 +41,7 @@ const AddRecipeForm = () => {
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter the recipe title"
           />
           {errors.title && <p className="text-red-500 text-sm">{errors.title}</p>}
@@ -53,7 +53,7 @@ const AddRecipeForm = () => {
             id="ingredients"
             value={ingredients}
             onChange={(e) => setIngredients(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             rows="4"
             placeholder="List ingredients (one per line)"
           />
@@ -66,7 +66,7 @@ const AddRecipeForm = () => {
             id="preparation"
             value={preparation}
             onChange={(e) => setPreparation(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             rows="4"
             placeholder="Describe the preparation steps"
           />
@@ -75,7 +75,7 @@ const AddRecipeForm = () => {
 
         <button
           type="submit"
-          className="w-full p-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition"
+          className="w-full p-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-200"
         >
           Submit Recipe
         </button>

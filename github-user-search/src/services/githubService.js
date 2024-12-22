@@ -1,13 +1,18 @@
 /* eslint-disable no-unused-vars */
 import axios from "axios";
 
-// Fetch user data from GitHub API
-const fetchUserData = async (username) => {
+const fetchUserData = async (username, location = "", minRepos = "") => {
     try {
-        const response = await axios.get(`https://api.github.com/users/${username}`);
-        return response.data; // Return the user data if successful
+        let query = `q=${username}`;
+
+        // Add additional filters for location and min repositories
+        if (location) query += `+location:${location}`;
+        if (minRepos) query += `+repos:>=${minRepos}`;
+
+        const response = await axios.get(`https://api.github.com/search/users?${query}`);
+        return response.data.items; // Return the array of user data from the API response
     } catch (error) {
-        throw new Error("User not found"); // Throw an error if something goes wrong
+        throw new Error("User not found or invalid query");
     }
 };
 

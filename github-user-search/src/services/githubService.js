@@ -9,8 +9,8 @@ const fetchUserData = async (username, location = "", minRepos = "") => {
         if (location) query += `+location:${location}`;
         if (minRepos) query += `+repos:>=${minRepos}`;
 
-        const response = await axios.get(`https://api.github.com/search/users?${query}`);
-        return response.data.items; // Return the array of user data from the API response
+        const response = await axios.get(`https://api.github.com/search/users?${query}`); //https://api.github.com/search/users?q
+        return response.data.items; // Return the array of user data from the API response 
     } catch (error) {
         throw new Error("User not found or invalid query");
     }
